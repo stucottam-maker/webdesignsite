@@ -7,6 +7,7 @@ const projects = [
     type: "Brand / Website / Food Concept",
     text: "A Latin street food and Mexican pantry concept shaped for London, combining brand direction, website structure, menu thinking and launch content.",
     tags: ["Brand direction", "Website", "Menu strategy", "Launch copy"],
+    image: "/images/benditos-portfolio.webp",
     className: "benditos",
   },
   {
@@ -14,6 +15,7 @@ const projects = [
     type: "Restaurant Website",
     text: "A bold restaurant website built around craving-led copy, strong food imagery, a clear menu structure, contact flow, allergens and simple SEO.",
     tags: ["Restaurant site", "Menu page", "Contact form", "SEO"],
+    image: "/images/crudelia-portfolio.webp",
     className: "crudelia",
   },
   {
@@ -21,6 +23,7 @@ const projects = [
     type: "Tourism / Experience Website",
     text: "A Mexico City food tour concept built around local culture, visual storytelling, bilingual structure and experience-led navigation.",
     tags: ["Tourism", "Bilingual UX", "Landing page", "Storytelling"],
+    image: "/images/entrecalles-portfolio.webp",
     className: "entrecalles",
   },
 ];
@@ -43,15 +46,6 @@ const services = [
   },
 ];
 
-const included = [
-  "Responsive design",
-  "Copy structure",
-  "SEO basics",
-  "Contact setup",
-  "Domain support",
-  "Launch support",
-];
-
 const process = [
   {
     title: "Discover",
@@ -71,25 +65,20 @@ const process = [
   },
 ];
 
+const included = [
+  "Responsive design",
+  "Copy structure",
+  "SEO basics",
+  "Contact setup",
+  "Domain support",
+  "Launch support",
+];
+
 function ProjectCard({ project }) {
   return (
     <article className={`project-card ${project.className}`}>
-      <div className="project-visual">
-        <div className="browser-bar">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-
-        <div className="mockup-window">
-          <p>{project.type}</p>
-          <h3>{project.title}</h3>
-          <div className="mockup-lines">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
+      <div className="project-visual image-visual">
+        <img src={project.image} alt={`${project.title} website preview`} />
       </div>
 
       <div className="project-copy">
