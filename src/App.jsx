@@ -283,14 +283,12 @@ function App() {
                 Message on WhatsApp
               </a>
 
-              <a href="mailto:hello@example.com" className="button secondary">
+              <a href="mailto:stucottam@gmail.com" className="button secondary">
                 Email Stu
               </a>
             </div>
 
-            <p className="contact-note">
-              Replace the WhatsApp number and email with your real details.
-            </p>
+        
           </div>
         </section>
       </main>
