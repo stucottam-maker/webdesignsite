@@ -284,14 +284,23 @@ function App() {
               </a>
 
               <a href="mailto:stucottam@gmail.com" className="button secondary">
+
                 Email Stu
+
               </a>
+
             </div>
 
-        
           </div>
-      
-    
+
+        </section>
+
+      </main>
+
+    </>
+
+  );
+
 }
 
 export default App;
