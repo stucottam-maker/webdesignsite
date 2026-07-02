@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./style.css";
 
 const projects = [
@@ -5,7 +6,7 @@ const projects = [
     title: "Benditos",
     type: "Brand / Website / Food Concept",
     description:
-      "Latin street food, Mexican honey and pantry concept for London, built around flavour, warmth and a clean digital presence.",
+      "A Latin street food, Mexican honey and pantry concept created for London, built around bold flavour, warm branding and a clean digital presence.",
     tags: ["Branding", "Menu", "Website", "Launch Copy"],
     className: "benditos",
   },
@@ -62,18 +63,43 @@ function ProjectMockup({ project }) {
 }
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <>
       <header className="site-header">
-        <a href="#top" className="logo">
+        <a href="#top" className="logo" onClick={closeMenu}>
           Built by Stu
         </a>
 
-        <nav className="nav">
-          <a href="#work">Work</a>
-          <a href="#services">Services</a>
-          <a href="#process">Process</a>
-          <a href="#contact">Contact</a>
+        <button
+          className={`menu-toggle ${menuOpen ? "open" : ""}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle navigation menu"
+          aria-expanded={menuOpen}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav className={`nav-dropdown ${menuOpen ? "open" : ""}`}>
+          <a href="#work" onClick={closeMenu}>
+            Work
+          </a>
+          <a href="#services" onClick={closeMenu}>
+            Services
+          </a>
+          <a href="#process" onClick={closeMenu}>
+            Process
+          </a>
+          <a href="#contact" onClick={closeMenu}>
+            Contact
+          </a>
         </nav>
       </header>
 
@@ -86,7 +112,8 @@ function App() {
 
             <p>
               Clean, modern websites for restaurants, cafés, food brands,
-              creatives and independent businesses.
+              creatives and independent businesses who need to look professional
+              online without making things complicated.
             </p>
 
             <div className="hero-buttons">
@@ -114,13 +141,9 @@ function App() {
               </div>
             </div>
 
-            <div className="floating-card card-one">
-              Restaurant sites
-            </div>
+            <div className="floating-card card-one">Restaurant sites</div>
 
-            <div className="floating-card card-two">
-              Brand launches
-            </div>
+            <div className="floating-card card-two">Brand launches</div>
           </div>
         </section>
 
@@ -214,14 +237,16 @@ function App() {
         <section id="contact" className="contact-section">
           <div>
             <p className="eyebrow">Start a project</p>
+
             <h2>Need a simple website that looks proper?</h2>
+
             <p>
               Send me a message with what you’re building and what kind of site
               you need.
             </p>
 
             <a
-              href="https://wa.me/447723187596"
+              href="https://wa.me/44YOURNUMBER"
               target="_blank"
               rel="noopener noreferrer"
               className="button cream"
