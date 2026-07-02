@@ -157,7 +157,7 @@ button {
   background: rgba(237, 244, 255, 0.08);
 }
 
-/* Type */
+/* Typography */
 
 .eyebrow {
   margin-bottom: 16px;
@@ -434,6 +434,13 @@ h3 {
   background: var(--card);
   box-shadow: 0 30px 90px rgba(0, 0, 0, 0.22);
   backdrop-filter: blur(22px);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(122, 179, 255, 0.32);
+  box-shadow: 0 38px 110px rgba(47, 128, 255, 0.14);
 }
 
 .project-card:nth-child(even) {
@@ -453,23 +460,71 @@ h3 {
   border: 1px solid rgba(237, 244, 255, 0.1);
 }
 
-.project-card.benditos .project-visual {
+.image-visual {
+  min-height: 320px;
+  padding: 12px;
   background:
-    radial-gradient(circle at 24% 20%, rgba(122, 179, 255, 0.82), transparent 30%),
-    linear-gradient(135deg, #07111f, #123a73);
+    radial-gradient(circle at 50% 0%, rgba(47, 128, 255, 0.18), transparent 40%),
+    var(--navy);
 }
 
-.project-card.crudelia .project-visual {
-  background:
-    radial-gradient(circle at 70% 25%, rgba(237, 244, 255, 0.42), transparent 26%),
-    linear-gradient(135deg, #06101d, #184f97);
+.image-visual img {
+  width: 100%;
+  height: 100%;
+  min-height: 296px;
+  display: block;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 20px;
+  border: 1px solid rgba(237, 244, 255, 0.12);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.28);
+  transition: transform 0.35s ease;
 }
 
-.project-card.entrecalles .project-visual {
-  background:
-    radial-gradient(circle at 28% 24%, rgba(122, 179, 255, 0.66), transparent 26%),
-    linear-gradient(135deg, #081421, #2f80ff);
+.project-card:hover .image-visual img {
+  transform: scale(1.025);
 }
+
+.project-copy {
+  padding: 18px 8px;
+  align-self: center;
+}
+
+.project-copy p:not(.eyebrow) {
+  max-width: 520px;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 24px;
+}
+
+.tag-list span {
+  padding: 7px 11px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted-strong);
+  font-size: 0.8rem;
+  font-weight: 850;
+}
+
+.text-link {
+  display: inline-flex;
+  margin-top: 24px;
+  color: var(--blue-soft);
+  font-size: 0.95rem;
+  font-weight: 900;
+}
+
+.text-link:hover {
+  color: var(--text);
+}
+
+/* Old mockup fallback */
 
 .browser-bar {
   height: 42px;
@@ -534,45 +589,6 @@ h3 {
 
 .mockup-lines span:nth-child(3) {
   width: 42%;
-}
-
-.project-copy {
-  padding: 18px 8px;
-  align-self: center;
-}
-
-.project-copy p:not(.eyebrow) {
-  max-width: 520px;
-  color: var(--muted);
-  font-size: 1rem;
-}
-
-.tag-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 9px;
-  margin-top: 24px;
-}
-
-.tag-list span {
-  padding: 7px 11px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  color: var(--muted-strong);
-  font-size: 0.8rem;
-  font-weight: 850;
-}
-
-.text-link {
-  display: inline-flex;
-  margin-top: 24px;
-  color: var(--blue-soft);
-  font-size: 0.95rem;
-  font-weight: 900;
-}
-
-.text-link:hover {
-  color: var(--text);
 }
 
 /* Services */
@@ -814,6 +830,16 @@ h3 {
 
   .project-visual {
     min-height: 300px;
+  }
+
+  .image-visual {
+    min-height: 260px;
+    padding: 10px;
+  }
+
+  .image-visual img {
+    min-height: 240px;
+    border-radius: 18px;
   }
 
   .mockup-window {
