@@ -46,6 +46,30 @@ const services = [
   },
 ];
 
+const packages = [
+  {
+    title: "Website Refresh",
+    price: "From £350",
+    timeline: "1–2 weeks",
+    text: "A cleaner, sharper version of an existing site that feels outdated, messy or no longer matches the quality of the business.",
+    bestFor: ["Outdated websites", "Messy layouts", "Better copy structure"],
+  },
+  {
+    title: "Launch Site",
+    price: "From £450",
+    timeline: "1–2 weeks",
+    text: "A clean one-page website for new brands, founders, pop-ups and small businesses that need to look established quickly.",
+    bestFor: ["New businesses", "Portfolio launches", "Simple service pages"],
+  },
+  {
+    title: "Restaurant Site",
+    price: "From £750",
+    timeline: "2–3 weeks",
+    text: "A focused website for restaurants, cafés and food brands, built around menus, imagery, opening hours, contact details and local SEO basics.",
+    bestFor: ["Restaurants", "Street food brands", "Cafés"],
+  },
+];
+
 const process = [
   {
     title: "Discover",
@@ -115,12 +139,12 @@ function App() {
   return (
     <>
       <header className="site-header">
-      <a href="#top" className="logo" onClick={closeMenu} aria-label="Cauce home">
-  <span className="logo-mark">
-    <span></span>
-  </span>
-  <span className="logo-text">Cauce</span>
-</a>
+        <a href="#top" className="logo" onClick={closeMenu} aria-label="Cauce home">
+          <span className="logo-mark">
+            <span></span>
+          </span>
+          <span className="logo-text">Cauce</span>
+        </a>
 
         <button
           className={`menu-toggle ${menuOpen ? "open" : ""}`}
@@ -139,6 +163,9 @@ function App() {
           </a>
           <a href="#services" onClick={closeMenu}>
             What I Build
+          </a>
+          <a href="#packages" onClick={closeMenu}>
+            Starting Points
           </a>
           <a href="#process" onClick={closeMenu}>
             The Route
@@ -243,6 +270,50 @@ function App() {
           </div>
         </section>
 
+        <section id="packages" className="section packages-section">
+          <div className="section-heading">
+            <p className="eyebrow">Starting Points</p>
+            <h2>Simple website packages for independent brands at different stages.</h2>
+          </div>
+
+          <div className="packages-grid">
+            {packages.map((item) => (
+              <article key={item.title} className="package-card">
+                <div className="package-top">
+                  <h3>{item.title}</h3>
+                  <div>
+                    <strong>{item.price}</strong>
+                    <span>{item.timeline}</span>
+                  </div>
+                </div>
+
+                <p>{item.text}</p>
+
+                <div className="package-best">
+                  <span>Best for</span>
+                  <ul>
+                    {item.bestFor.map((point) => (
+                      <li key={point}>{point}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                <a href="#contact" className="text-link">
+                  Start with this
+                </a>
+              </article>
+            ))}
+          </div>
+
+          <div className="packages-note">
+            <p>
+              Projects from £350. Launch sites from £450. Final pricing depends
+              on structure, content, features and launch support.
+            </p>
+            <a href="#contact">Send a message and I’ll suggest the simplest route.</a>
+          </div>
+        </section>
+
         <section id="process" className="section process-section">
           <div className="section-heading">
             <p className="eyebrow">The Route</p>
@@ -299,6 +370,35 @@ function App() {
             </div>
           </div>
         </section>
+
+        <footer className="site-footer">
+          <div>
+            <a href="#top" className="footer-logo">
+              Cauce
+            </a>
+            <p>Website design for independent brands.</p>
+          </div>
+
+          <div className="footer-links">
+            <a href="mailto:stucottam@gmail.com">stucottam@gmail.com</a>
+            <a
+              href="https://wa.me/447723187596"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              WhatsApp
+            </a>
+            <a
+              href="https://www.instagram.com/stucottam"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Instagram
+            </a>
+          </div>
+
+          <span>© 2026 Cauce</span>
+        </footer>
       </main>
     </>
   );
