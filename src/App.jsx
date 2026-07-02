@@ -115,9 +115,12 @@ function App() {
   return (
     <>
       <header className="site-header">
-        <a href="#top" className="logo" onClick={closeMenu}>
-          Cauce
-        </a>
+      <a href="#top" className="logo" onClick={closeMenu} aria-label="Cauce home">
+  <span className="logo-mark">
+    <span></span>
+  </span>
+  <span className="logo-text">Cauce</span>
+</a>
 
         <button
           className={`menu-toggle ${menuOpen ? "open" : ""}`}
