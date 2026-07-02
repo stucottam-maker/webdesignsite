@@ -293,11 +293,7 @@ function App() {
         </section>
       </main>
 
-      <footer className="footer">
-        <p>Built by Stu — Websites for independent brands.</p>
-      </footer>
-    </>
-  );
+    
 }
 
 export default App;
