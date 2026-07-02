@@ -4,26 +4,23 @@ import "./style.css";
 const projects = [
   {
     title: "Benditos",
-    category: "Brand / Website / Food Concept",
-    description:
-      "A Latin street food, Mexican honey and pantry concept shaped for London, combining brand direction, website structure, menu thinking and launch content.",
-    services: ["Brand direction", "Website", "Menu strategy", "Launch copy"],
+    type: "Brand / Website / Food Concept",
+    text: "A Latin street food and Mexican pantry concept shaped for London, combining brand direction, website structure, menu thinking and launch content.",
+    tags: ["Brand direction", "Website", "Menu strategy", "Launch copy"],
     className: "benditos",
   },
   {
     title: "Crudelia",
-    category: "Restaurant Website",
-    description:
-      "A bold restaurant website built around craving-led copy, strong food imagery, clear menu structure, contact flow, allergens and simple SEO.",
-    services: ["Restaurant site", "Menu page", "Contact form", "SEO"],
+    type: "Restaurant Website",
+    text: "A bold restaurant website built around craving-led copy, strong food imagery, a clear menu structure, contact flow, allergens and simple SEO.",
+    tags: ["Restaurant site", "Menu page", "Contact form", "SEO"],
     className: "crudelia",
   },
   {
     title: "Entre Calles",
-    category: "Tourism / Experience Website",
-    description:
-      "A Mexico City food tour concept built around local culture, visual storytelling, bilingual structure and experience-led navigation.",
-    services: ["Tourism", "Bilingual UX", "Landing page", "Storytelling"],
+    type: "Tourism / Experience Website",
+    text: "A Mexico City food tour concept built around local culture, visual storytelling, bilingual structure and experience-led navigation.",
+    tags: ["Tourism", "Bilingual UX", "Landing page", "Storytelling"],
     className: "entrecalles",
   },
 ];
@@ -37,22 +34,41 @@ const services = [
   {
     number: "02",
     title: "Restaurant & hospitality sites",
-    text: "Clean digital homes for menus, locations, opening hours, galleries, bookings, contact forms and social links.",
+    text: "Menus, galleries, locations, opening hours, bookings, contact forms and social links, designed clearly around the customer journey.",
   },
   {
     number: "03",
     title: "Digital refreshes",
-    text: "Refined updates for businesses with existing websites that feel outdated, messy or no longer match the brand.",
+    text: "Clean improvements for existing websites that feel outdated, messy or no longer match the quality of the business.",
   },
 ];
 
 const included = [
   "Responsive design",
   "Copy structure",
-  "Contact setup",
   "SEO basics",
+  "Contact setup",
   "Domain support",
   "Launch support",
+];
+
+const process = [
+  {
+    title: "Discover",
+    text: "We define the business, audience, goals, style and what the site actually needs to do.",
+  },
+  {
+    title: "Design",
+    text: "I shape the structure, page flow, visual direction and copy so the site feels clear and considered.",
+  },
+  {
+    title: "Build",
+    text: "The website is developed, refined and tested across screen sizes before launch.",
+  },
+  {
+    title: "Launch",
+    text: "Domain, contact links, SEO basics and final checks are handled so the site is ready to share.",
+  },
 ];
 
 function ProjectCard({ project }) {
@@ -66,8 +82,8 @@ function ProjectCard({ project }) {
         </div>
 
         <div className="mockup-window">
-          <div className="mockup-label">{project.category}</div>
-          <div className="mockup-title">{project.title}</div>
+          <p>{project.type}</p>
+          <h3>{project.title}</h3>
           <div className="mockup-lines">
             <span></span>
             <span></span>
@@ -76,14 +92,14 @@ function ProjectCard({ project }) {
         </div>
       </div>
 
-      <div className="project-content">
-        <p className="eyebrow small">{project.category}</p>
+      <div className="project-copy">
+        <p className="eyebrow small">{project.type}</p>
         <h3>{project.title}</h3>
-        <p>{project.description}</p>
+        <p>{project.text}</p>
 
         <div className="tag-list">
-          {project.services.map((service) => (
-            <span key={service}>{service}</span>
+          {project.tags.map((tag) => (
+            <span key={tag}>{tag}</span>
           ))}
         </div>
 
@@ -120,19 +136,19 @@ function App() {
 
         <nav className={`nav-dropdown ${menuOpen ? "open" : ""}`}>
           <a href="#work" onClick={closeMenu}>
-            Selected work
+            Selected Work
           </a>
           <a href="#services" onClick={closeMenu}>
-            Services
-          </a>
-          <a href="#included" onClick={closeMenu}>
-            What’s included
+            What I Build
           </a>
           <a href="#process" onClick={closeMenu}>
-            Process
+            How It Works
+          </a>
+          <a href="#included" onClick={closeMenu}>
+            What’s Included
           </a>
           <a href="#contact" onClick={closeMenu}>
-            Start a project
+            Start a Project
           </a>
         </nav>
       </header>
@@ -140,16 +156,15 @@ function App() {
       <main id="top">
         <section className="hero">
           <div className="hero-copy">
-            <p className="eyebrow">Digital design for independent brands</p>
+            <p className="eyebrow">Websites for independent brands</p>
 
-            <h1>
-              Sharp websites for brands that need to look established from day
-              one.
-            </h1>
+            <h1>Look established. Launch cleanly. Grow with confidence.</h1>
 
             <p>
-              Built by Stu Studio creates clean, considered websites for food
-              brands, restaurants, creatives and independent businesses.
+              I create clean, considered websites for restaurants, food brands,
+              creatives and founders who need more than a page online — they
+              need a digital presence that feels sharp, trustworthy and ready to
+              share.
             </p>
 
             <div className="hero-actions">
@@ -163,39 +178,43 @@ function App() {
           </div>
 
           <div className="hero-panel">
-            <div className="studio-card">
-              <div className="studio-card-top">
+            <div className="hero-card">
+              <div className="hero-card-top">
                 <span></span>
                 <span></span>
                 <span></span>
               </div>
 
-              <div className="studio-card-content">
-                <p>Featured direction</p>
-                <h2>Benditos</h2>
-                <span>Brand · Website · Launch</span>
+              <div className="hero-card-inner">
+                <p>Founder-led digital studio</p>
+                <h2>Strategy. Copy. Design. Build. Launch.</h2>
+                <span>No bloated agency process. No lifeless template feel.</span>
               </div>
             </div>
 
-            <div className="floating-note note-one">Strategy</div>
-            <div className="floating-note note-two">Copy</div>
-            <div className="floating-note note-three">Design</div>
+            <div className="floating-note note-one">Restaurants</div>
+            <div className="floating-note note-two">Launches</div>
+            <div className="floating-note note-three">Refreshes</div>
           </div>
+        </section>
+
+        <section className="trust-strip">
+          <span>Brand direction</span>
+          <span>Website design</span>
+          <span>Copy structure</span>
+          <span>Launch support</span>
         </section>
 
         <section className="statement-section">
           <p>
-            Strategy. Copy. Design. Build. Launch.
+            No bloated agency process. No lifeless template feel. Just a clean,
+            considered site shaped around your business.
           </p>
-          <span>
-            A lean studio approach for brands that need a polished digital
-            presence without agency noise.
-          </span>
         </section>
 
         <section id="work" className="section work-section">
           <div className="section-heading">
-            <p className="eyebrow">Selected work</p>
+            <p className="eyebrow">Selected Work</p>
             <h2>Built for brands with taste, story and ambition.</h2>
           </div>
 
@@ -208,7 +227,7 @@ function App() {
 
         <section id="services" className="section services-section">
           <div className="section-heading">
-            <p className="eyebrow">Services</p>
+            <p className="eyebrow">What I Build</p>
             <h2>Digital presence, shaped properly.</h2>
           </div>
 
@@ -223,10 +242,27 @@ function App() {
           </div>
         </section>
 
+        <section id="process" className="section process-section">
+          <div className="section-heading">
+            <p className="eyebrow">How It Works</p>
+            <h2>Clear, calm and built around launch.</h2>
+          </div>
+
+          <div className="process-grid">
+            {process.map((step, index) => (
+              <article key={step.title}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <h3>{step.title}</h3>
+                <p>{step.text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
         <section id="included" className="section included-section">
           <div className="included-panel">
             <div>
-              <p className="eyebrow">What’s included</p>
+              <p className="eyebrow">What’s Included</p>
               <h2>Everything needed to launch cleanly.</h2>
             </div>
 
@@ -238,41 +274,11 @@ function App() {
           </div>
         </section>
 
-        <section id="process" className="section process-section">
-          <div className="process-panel">
-            <div>
-              <p className="eyebrow">Process</p>
-              <h2>Clear, calm and built around launch.</h2>
-            </div>
-
-            <div className="process-steps">
-              <div>
-                <span>01</span>
-                <p>We define the business, audience, style and purpose.</p>
-              </div>
-
-              <div>
-                <span>02</span>
-                <p>I shape the structure, visual direction and site copy.</p>
-              </div>
-
-              <div>
-                <span>03</span>
-                <p>The website is built, refined and tested across screens.</p>
-              </div>
-
-              <div>
-                <span>04</span>
-                <p>You launch with a polished site ready to send people to.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <section id="contact" className="contact-section">
           <div>
-            <p className="eyebrow">Start a project</p>
+            <p className="eyebrow">Start a Project</p>
             <h2>Ready to give your business a sharper online presence?</h2>
+
             <p>
               Send me a message with what you’re building, where you are now and
               what you need the website to do.
@@ -301,7 +307,7 @@ function App() {
       </main>
 
       <footer className="footer">
-        <p>Built by Stu Studio — Digital design for independent brands.</p>
+        <p>Built by Stu Studio — Websites for independent brands.</p>
       </footer>
     </>
   );
