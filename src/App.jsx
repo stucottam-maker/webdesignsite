@@ -32,36 +32,36 @@ const services = [
   {
     number: "01",
     title: "Launch websites",
-    text: "Focused websites for new brands, pop-ups, founders and small businesses who need to look established quickly.",
+    text: "Focused websites for new brands, pop-ups, founders and small businesses who need to look established quickly and launch with confidence.",
   },
   {
     number: "02",
     title: "Restaurant & hospitality sites",
-    text: "Menus, galleries, locations, opening hours, bookings, contact forms and social links, designed clearly around the customer journey.",
+    text: "Menus, galleries, locations, opening hours, bookings, contact forms and social links, shaped clearly around the customer journey.",
   },
   {
     number: "03",
     title: "Digital refreshes",
-    text: "Clean improvements for existing websites that feel outdated, messy or no longer match the quality of the business.",
+    text: "Clean improvements for existing websites that feel outdated, messy or no longer match the quality of the business in real life.",
   },
 ];
 
 const process = [
   {
     title: "Discover",
-    text: "We define the business, audience, goals, style and what the site actually needs to do.",
+    text: "We define the business, audience, goals, style and what the website actually needs to do.",
   },
   {
-    title: "Design",
-    text: "I shape the structure, page flow, visual direction and copy so the site feels clear and considered.",
+    title: "Shape",
+    text: "I map the structure, page flow, copy direction and visual route so the site has clarity before it is built.",
   },
   {
     title: "Build",
-    text: "The website is developed, refined and tested across screen sizes before launch.",
+    text: "The website is designed, developed, refined and tested across screen sizes.",
   },
   {
     title: "Launch",
-    text: "Domain, contact links, SEO basics and final checks are handled so the site is ready to share.",
+    text: "Domain support, contact links, SEO basics and final checks are handled so the site is ready to share.",
   },
 ];
 
@@ -100,16 +100,23 @@ function ProjectCard({ project }) {
   );
 }
 
+function RouteMark() {
+  return (
+    <span className="route-mark" aria-hidden="true">
+      <span></span>
+    </span>
+  );
+}
+
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
-
   const closeMenu = () => setMenuOpen(false);
 
   return (
     <>
       <header className="site-header">
         <a href="#top" className="logo" onClick={closeMenu}>
-          Built by Stu
+          Cauce
         </a>
 
         <button
@@ -131,7 +138,7 @@ function App() {
             What I Build
           </a>
           <a href="#process" onClick={closeMenu}>
-            How It Works
+            The Route
           </a>
           <a href="#included" onClick={closeMenu}>
             What’s Included
@@ -144,16 +151,17 @@ function App() {
 
       <main id="top">
         <section className="hero">
+          <div className="path-line hero-path" aria-hidden="true"></div>
+
           <div className="hero-copy">
-            <p className="eyebrow">Websites for independent brands</p>
+            <p className="eyebrow">Digital presence, shaped with direction</p>
 
             <h1>Look established. Launch cleanly. Grow with confidence.</h1>
 
             <p>
-              I create clean, considered websites for restaurants, food brands,
-              creatives and founders who need more than a page online — they
-              need a digital presence that feels sharp, trustworthy and ready to
-              share.
+              We shape a clear digital path for independent brands that need to
+              look as good online as they are in real life — with clean websites
+              built around structure, clarity and launch.
             </p>
 
             <div className="hero-actions">
@@ -175,36 +183,37 @@ function App() {
               </div>
 
               <div className="hero-card-inner">
-                <p>Founder-led digital studio</p>
+                <p>Small studio. Clear process.</p>
                 <h2>Strategy. Copy. Design. Build. Launch.</h2>
-                <span>No bloated agency process. No lifeless template feel.</span>
+                <span>A calmer route from idea to website.</span>
               </div>
             </div>
 
-            <div className="floating-note note-one">Restaurants</div>
-            <div className="floating-note note-two">Launches</div>
-            <div className="floating-note note-three">Refreshes</div>
+            <div className="floating-note note-one">Direction</div>
+            <div className="floating-note note-two">Structure</div>
+            <div className="floating-note note-three">Launch</div>
           </div>
         </section>
 
         <section className="trust-strip">
-          <span>Brand direction</span>
+          <span>Direction</span>
           <span>Website design</span>
           <span>Copy structure</span>
           <span>Launch support</span>
         </section>
 
         <section className="statement-section">
+          <RouteMark />
           <p>
-            No bloated agency process. No lifeless template feel. Just a clean,
-            considered site shaped around your business.
+            A strong website should give your business direction online — clear
+            enough to trust, simple enough to use and sharp enough to share.
           </p>
         </section>
 
         <section id="work" className="section work-section">
           <div className="section-heading">
             <p className="eyebrow">Selected Work</p>
-            <h2>Built for brands with taste, story and ambition.</h2>
+            <h2>Selected work shaped with clarity, character and direction.</h2>
           </div>
 
           <div className="project-grid">
@@ -217,7 +226,7 @@ function App() {
         <section id="services" className="section services-section">
           <div className="section-heading">
             <p className="eyebrow">What I Build</p>
-            <h2>Digital presence, shaped properly.</h2>
+            <h2>Websites with a clear route from idea to launch.</h2>
           </div>
 
           <div className="services-grid">
@@ -233,8 +242,8 @@ function App() {
 
         <section id="process" className="section process-section">
           <div className="section-heading">
-            <p className="eyebrow">How It Works</p>
-            <h2>Clear, calm and built around launch.</h2>
+            <p className="eyebrow">The Route</p>
+            <h2>A calm, structured path from first idea to finished website.</h2>
           </div>
 
           <div className="process-grid">
@@ -266,8 +275,7 @@ function App() {
         <section id="contact" className="contact-section">
           <div>
             <p className="eyebrow">Start a Project</p>
-            <h2>Ready to give your business a sharper online presence?</h2>
-
+            <h2>Ready to give your business a clearer path online?</h2>
             <p>
               Send me a message with what you’re building, where you are now and
               what you need the website to do.
@@ -282,25 +290,15 @@ function App() {
               >
                 Message on WhatsApp
               </a>
-
               <a href="mailto:stucottam@gmail.com" className="button secondary">
-
-                Email Stu
-
+                Email me
               </a>
-
             </div>
-
           </div>
-
         </section>
-
       </main>
-
     </>
-
   );
-
 }
 
 export default App;
