@@ -109,7 +109,7 @@ function App() {
     <>
       <header className="site-header">
         <a href="#top" className="logo" onClick={closeMenu}>
-          Built by Stu Studio
+          Built by Stu
         </a>
 
         <button
@@ -296,7 +296,7 @@ function App() {
       </main>
 
       <footer className="footer">
-        <p>Built by Stu Studio — Websites for independent brands.</p>
+        <p>Built by Stu — Websites for independent brands.</p>
       </footer>
     </>
   );
