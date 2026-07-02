@@ -85,14 +85,14 @@ button {
 }
 
 .menu-toggle {
-  width: 52px;
-  height: 52px;
+  width: 46px;
+  height: 46px;
   border: 1px solid rgba(237, 244, 255, 0.16);
   border-radius: 999px;
   background: var(--blue);
   display: grid;
   place-items: center;
-  gap: 4px;
+  gap: 3px;
   cursor: pointer;
   position: relative;
   z-index: 60;
@@ -102,7 +102,7 @@ button {
 
 .menu-toggle span {
   display: block;
-  width: 19px;
+  width: 17px;
   height: 2px;
   background: white;
   border-radius: 999px;
@@ -110,7 +110,7 @@ button {
 }
 
 .menu-toggle.open span:nth-child(1) {
-  transform: translateY(6px) rotate(45deg);
+  transform: translateY(5px) rotate(45deg);
 }
 
 .menu-toggle.open span:nth-child(2) {
@@ -118,7 +118,7 @@ button {
 }
 
 .menu-toggle.open span:nth-child(3) {
-  transform: translateY(-6px) rotate(-45deg);
+  transform: translateY(-5px) rotate(-45deg);
 }
 
 .nav-dropdown {
