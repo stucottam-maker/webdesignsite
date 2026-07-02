@@ -1,302 +1,616 @@
-import "./App.css";
-
-function App() {
-  return (
-    <>
-      <header className="site-header">
-        <a href="#top" className="logo">
-          Built by Stu
-        </a>
-
-        <nav className="nav">
-          <a href="#work">Work</a>
-          <a href="#services">Services</a>
-          <a href="#process">Process</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </header>
-
-      <main id="top">
-        <section className="hero">
-          <div className="hero-content">
-            <p className="eyebrow">Web design for small businesses</p>
-
-            <h1>Simple, beautiful websites that make your business look proper.</h1>
-
-            <p className="hero-text">
-              I build clean, modern websites for restaurants, cafés, food brands,
-              creatives and independent businesses who need to look professional
-              online without making things complicated.
-            </p>
-
-            <div className="hero-buttons">
-              <a href="#contact" className="button primary">
-                Start a project
-              </a>
-              <a href="#work" className="button secondary">
-                View work
-              </a>
-            </div>
-          </div>
-        </section>
-
-        <section className="intro section">
-          <div className="section-inner narrow">
-            <h2>Clean websites without the agency nonsense.</h2>
-
-            <p>
-              Whether you need a one-page site, a restaurant menu, a contact
-              form, basic SEO, a domain connected, or a full visual refresh, I can
-              help you build something sharp, simple and easy to share.
-            </p>
-          </div>
-        </section>
-
-        <section id="work" className="section work-section">
-          <div className="section-inner">
-            <div className="section-heading">
-              <p className="eyebrow">Recent work</p>
-              <h2>Projects with flavour, story and purpose.</h2>
-            </div>
-
-            <div className="work-grid">
-              <article className="work-card featured">
-                <span className="tag">Brand / Website / Food Concept</span>
-
-                <h3>Benditos</h3>
-
-                <p>
-                  A Latin street food, Mexican honey and pantry concept created
-                  for London, built around bold flavour, warm branding and a
-                  clean digital presence.
-                </p>
-
-                <p>
-                  The project included brand direction, website structure, menu
-                  development, launch copy, honey product storytelling, social
-                  media content and product page planning.
-                </p>
-              </article>
-
-              <article className="work-card">
-                <span className="tag">Restaurant Website</span>
-
-                <h3>Crudelia</h3>
-
-                <p>
-                  A punchy, modern food website built around corn, salsa, slow
-                  braises, fresh toppings and proper cravings.
-                </p>
-
-                <p>
-                  Designed with bold food imagery, a clear menu page, contact
-                  form, allergen information and simple SEO.
-                </p>
-              </article>
-
-              <article className="work-card">
-                <span className="tag">Travel / Experience Website</span>
-
-                <h3>Entre Calles</h3>
-
-                <p>
-                  A clean food tour website concept for Mexico City, built around
-                  strong visuals, local culture and easy navigation.
-                </p>
-
-                <p>
-                  The site direction focused on food experiences, local markets,
-                  storytelling, tour pages and bilingual structure.
-                </p>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section id="services" className="section services-section">
-          <div className="section-inner">
-            <div className="section-heading">
-              <p className="eyebrow">What I do</p>
-              <h2>Simple sites for real businesses.</h2>
-            </div>
-
-            <div className="services-grid">
-              <article className="service-card">
-                <h3>One-page websites</h3>
-                <p>
-                  Perfect for new businesses, pop-ups, chefs, cafés, freelancers
-                  and small brands who need a simple online presence.
-                </p>
-              </article>
-
-              <article className="service-card">
-                <h3>Restaurant websites</h3>
-                <p>
-                  Clean pages for menus, opening hours, locations, contact forms,
-                  image galleries and social links.
-                </p>
-              </article>
-
-              <article className="service-card">
-                <h3>Website refreshes</h3>
-                <p>
-                  Already have a site that feels messy, outdated or broken? I can
-                  tidy it up, rewrite the copy and make it feel professional.
-                </p>
-              </article>
-
-              <article className="service-card">
-                <h3>Launch pages</h3>
-                <p>
-                  A sharp, focused page for launching a product, event, food
-                  concept or new business idea.
-                </p>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section id="process" className="section process-section">
-          <div className="section-inner">
-            <div className="section-heading">
-              <p className="eyebrow">Process</p>
-              <h2>Clear, quick and straightforward.</h2>
-            </div>
-
-            <div className="process-list">
-              <div className="process-item">
-                <span>01</span>
-
-                <div>
-                  <h3>We talk</h3>
-                  <p>
-                    You tell me what you need, what style you like and what the
-                    site needs to do.
-                  </p>
-                </div>
-              </div>
-
-              <div className="process-item">
-                <span>02</span>
-
-                <div>
-                  <h3>I design</h3>
-                  <p>
-                    I create a clean direction for the site, including layout,
-                    colours, sections and copy.
-                  </p>
-                </div>
-              </div>
-
-              <div className="process-item">
-                <span>03</span>
-
-                <div>
-                  <h3>I build</h3>
-                  <p>
-                    The site is built with a clear structure, responsive layout
-                    and polished details.
-                  </p>
-                </div>
-              </div>
-
-              <div className="process-item">
-                <span>04</span>
-
-                <div>
-                  <h3>You launch</h3>
-                  <p>
-                    I help connect the domain, contact form and basic SEO so the
-                    site is ready to share.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="section packages-section">
-          <div className="section-inner">
-            <div className="section-heading">
-              <p className="eyebrow">Packages</p>
-              <h2>Simple starting points.</h2>
-            </div>
-
-            <div className="packages-grid">
-              <article className="package-card">
-                <h3>Starter Site</h3>
-                <p className="price">One-page website</p>
-
-                <ul>
-                  <li>Mobile-friendly design</li>
-                  <li>Basic copywriting</li>
-                  <li>Contact section</li>
-                  <li>Social links</li>
-                  <li>Basic SEO setup</li>
-                </ul>
-              </article>
-
-              <article className="package-card highlighted">
-                <h3>Restaurant Site</h3>
-                <p className="price">For cafés, chefs and food brands</p>
-
-                <ul>
-                  <li>Homepage</li>
-                  <li>Menu section or menu page</li>
-                  <li>Gallery</li>
-                  <li>Opening hours and location</li>
-                  <li>Contact form</li>
-                </ul>
-              </article>
-
-              <article className="package-card">
-                <h3>Website Refresh</h3>
-                <p className="price">Clean up an existing site</p>
-
-                <ul>
-                  <li>Layout improvements</li>
-                  <li>Cleaner copy</li>
-                  <li>Image updates</li>
-                  <li>Mobile improvements</li>
-                  <li>Contact form check</li>
-                </ul>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section id="contact" className="section contact-section">
-          <div className="section-inner narrow">
-            <p className="eyebrow">Start a project</p>
-
-            <h2>Need a simple website for your business?</h2>
-
-            <p>
-              Send me a message with what you’re building, what kind of site you
-              need and any examples you like.
-            </p>
-
-            <a
-              className="button primary"
-              href="https://wa.me/44YOURNUMBER"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Message me on WhatsApp
-            </a>
-
-            <p className="small-note">
-              Replace the WhatsApp link with your real number.
-            </p>
-          </div>
-        </section>
-      </main>
-
-      <footer className="footer">
-        <p>Built by Stu — Simple websites for small businesses.</p>
-      </footer>
-    </>
-  );
+:root {
+  --cream: #f5efe4;
+  --cream-dark: #e8d8c3;
+  --black: #17120e;
+  --muted: #76685b;
+  --orange: #c6532b;
+  --orange-dark: #8f351c;
+  --card: #fffaf2;
+  --line: rgba(23, 18, 14, 0.12);
 }
 
-export default App;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream);
+  color: var(--black);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-header {
+  position: fixed;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1120px, calc(100% - 32px));
+  z-index: 20;
+  padding: 14px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 250, 242, 0.82);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  backdrop-filter: blur(18px);
+  box-shadow: 0 20px 60px rgba(23, 18, 14, 0.08);
+}
+
+.logo {
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+.nav {
+  display: flex;
+  gap: 24px;
+  font-size: 0.86rem;
+  font-weight: 800;
+  color: var(--muted);
+}
+
+.nav a:hover {
+  color: var(--black);
+}
+
+.hero {
+  min-height: 100vh;
+  padding: 140px 6vw 80px;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 50px;
+  align-items: center;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(198, 83, 43, 0.24), transparent 34%),
+    radial-gradient(circle at 15% 85%, rgba(143, 53, 28, 0.14), transparent 30%),
+    linear-gradient(135deg, #f8f0e3 0%, #ead8bf 100%);
+  overflow: hidden;
+}
+
+.eyebrow {
+  margin-bottom: 18px;
+  color: var(--orange);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.07em;
+  line-height: 0.92;
+}
+
+h1 {
+  max-width: 860px;
+  margin-bottom: 28px;
+  font-size: clamp(4rem, 8.5vw, 8.4rem);
+}
+
+h2 {
+  max-width: 760px;
+  margin-bottom: 26px;
+  font-size: clamp(2.7rem, 5.8vw, 5.8rem);
+}
+
+h3 {
+  margin-bottom: 16px;
+  font-size: 2.1rem;
+}
+
+.hero-copy p:not(.eyebrow) {
+  max-width: 590px;
+  margin-bottom: 34px;
+  color: var(--muted);
+  font-size: 1.22rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 24px;
+  border-radius: 999px;
+  font-weight: 900;
+  transition: 0.2s ease;
+}
+
+.button.dark {
+  background: var(--black);
+  color: var(--cream);
+}
+
+.button.dark:hover {
+  background: var(--orange);
+}
+
+.button.light {
+  border: 1px solid var(--black);
+  color: var(--black);
+}
+
+.button.light:hover {
+  background: var(--black);
+  color: var(--cream);
+}
+
+.button.cream {
+  background: var(--cream);
+  color: var(--black);
+}
+
+.hero-showcase {
+  position: relative;
+  min-height: 560px;
+}
+
+.showcase-card {
+  position: absolute;
+  inset: 40px 0 auto auto;
+  width: min(520px, 100%);
+  min-height: 420px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 250, 242, 0.3);
+  border-radius: 34px;
+  background:
+    linear-gradient(135deg, rgba(23, 18, 14, 0.22), rgba(23, 18, 14, 0.65)),
+    radial-gradient(circle at 30% 20%, #f3a362, transparent 28%),
+    linear-gradient(135deg, #31150d, #c6532b);
+  color: var(--cream);
+  box-shadow: 0 40px 100px rgba(23, 18, 14, 0.26);
+}
+
+.mini-browser {
+  height: 48px;
+  padding: 17px 20px;
+  display: flex;
+  gap: 8px;
+  background: rgba(255, 250, 242, 0.1);
+}
+
+.mini-browser div {
+  width: 11px;
+  height: 11px;
+  border-radius: 999px;
+  background: rgba(255, 250, 242, 0.5);
+}
+
+.showcase-inner {
+  position: absolute;
+  left: 34px;
+  right: 34px;
+  bottom: 34px;
+}
+
+.showcase-inner p {
+  margin-bottom: 12px;
+  color: rgba(255, 250, 242, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.76rem;
+  font-weight: 900;
+}
+
+.showcase-inner h2 {
+  margin-bottom: 14px;
+  font-size: clamp(3.5rem, 7vw, 6rem);
+}
+
+.showcase-inner span {
+  color: rgba(255, 250, 242, 0.78);
+  font-weight: 800;
+}
+
+.floating-card {
+  position: absolute;
+  z-index: 3;
+  padding: 18px 22px;
+  border-radius: 22px;
+  background: rgba(255, 250, 242, 0.84);
+  border: 1px solid var(--line);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 20px 70px rgba(23, 18, 14, 0.14);
+  font-weight: 900;
+}
+
+.card-one {
+  top: 20px;
+  left: 20px;
+}
+
+.card-two {
+  right: 20px;
+  bottom: 40px;
+}
+
+.intro-strip {
+  padding: 22px 6vw;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  background: var(--black);
+  color: var(--cream);
+}
+
+.intro-strip span {
+  padding: 9px 15px;
+  border: 1px solid rgba(245, 239, 228, 0.2);
+  border-radius: 999px;
+  color: rgba(245, 239, 228, 0.8);
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.section {
+  padding: 110px 6vw;
+}
+
+.section-heading {
+  max-width: 850px;
+  margin-bottom: 54px;
+}
+
+.project-grid {
+  display: grid;
+  gap: 28px;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  gap: 34px;
+  align-items: stretch;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 38px;
+  background: var(--card);
+  box-shadow: 0 30px 90px rgba(23, 18, 14, 0.06);
+}
+
+.project-card:nth-child(even) {
+  grid-template-columns: 0.8fr 1fr;
+}
+
+.project-card:nth-child(even) .project-visual {
+  order: 2;
+}
+
+.project-visual {
+  min-height: 380px;
+  overflow: hidden;
+  border-radius: 28px;
+  background: var(--black);
+  position: relative;
+}
+
+.project-card.benditos .project-visual {
+  background:
+    radial-gradient(circle at 20% 20%, #f6b36d, transparent 30%),
+    linear-gradient(135deg, #24100a, #c6532b);
+}
+
+.project-card.crudelia .project-visual {
+  background:
+    radial-gradient(circle at 70% 25%, #ffe0a1, transparent 26%),
+    linear-gradient(135deg, #16120e, #7a2617);
+}
+
+.project-card.entrecalles .project-visual {
+  background:
+    radial-gradient(circle at 28% 24%, #f4cf83, transparent 26%),
+    linear-gradient(135deg, #24120e, #b83c24);
+}
+
+.browser-bar {
+  height: 46px;
+  padding: 16px 18px;
+  display: flex;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.13);
+}
+
+.browser-bar span {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255, 250, 242, 0.65);
+}
+
+.mockup-screen {
+  position: absolute;
+  left: 34px;
+  right: 34px;
+  bottom: 34px;
+  padding: 28px;
+  border-radius: 24px;
+  background: rgba(255, 250, 242, 0.14);
+  backdrop-filter: blur(18px);
+  color: var(--cream);
+  border: 1px solid rgba(255, 250, 242, 0.18);
+}
+
+.mockup-nav {
+  width: 42%;
+  height: 10px;
+  margin-bottom: 58px;
+  border-radius: 999px;
+  background: rgba(255, 250, 242, 0.48);
+}
+
+.mockup-title {
+  margin-bottom: 20px;
+  font-size: clamp(2.5rem, 5vw, 4.7rem);
+  font-weight: 900;
+  letter-spacing: -0.08em;
+  line-height: 0.9;
+}
+
+.mockup-line {
+  width: 64%;
+  height: 10px;
+  margin-bottom: 10px;
+  border-radius: 999px;
+  background: rgba(255, 250, 242, 0.35);
+}
+
+.mockup-line.wide {
+  width: 86%;
+}
+
+.mockup-button {
+  width: 120px;
+  height: 34px;
+  margin-top: 24px;
+  border-radius: 999px;
+  background: var(--cream);
+}
+
+.project-content {
+  padding: 22px 10px;
+  align-self: center;
+}
+
+.project-type {
+  margin-bottom: 16px;
+  color: var(--orange);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.project-content p {
+  max-width: 520px;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.tag-list span {
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.services-section {
+  background: var(--black);
+  color: var(--cream);
+}
+
+.services-section .section-heading h2 {
+  color: var(--cream);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.services-grid article {
+  min-height: 320px;
+  padding: 32px;
+  border: 1px solid rgba(245, 239, 228, 0.16);
+  border-radius: 30px;
+  background: rgba(255, 250, 242, 0.06);
+}
+
+.services-grid span {
+  display: block;
+  margin-bottom: 90px;
+  color: #f3a362;
+  font-weight: 900;
+}
+
+.services-grid p {
+  color: rgba(245, 239, 228, 0.68);
+}
+
+.process-panel {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 50px;
+  padding: 44px;
+  border-radius: 38px;
+  background: var(--card);
+  border: 1px solid var(--line);
+}
+
+.process-steps {
+  display: grid;
+  gap: 14px;
+}
+
+.process-steps div {
+  padding: 22px;
+  border-radius: 22px;
+  background: var(--cream);
+  border: 1px solid var(--line);
+}
+
+.process-steps span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--orange);
+  font-weight: 900;
+}
+
+.process-steps p {
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.contact-section {
+  padding: 120px 6vw;
+  text-align: center;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(198, 83, 43, 0.26), transparent 35%),
+    var(--black);
+  color: var(--cream);
+}
+
+.contact-section div {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.contact-section p:not(.eyebrow) {
+  max-width: 570px;
+  margin: 0 auto 34px;
+  color: rgba(245, 239, 228, 0.7);
+  font-size: 1.15rem;
+}
+
+.footer {
+  padding: 28px 6vw;
+  background: var(--black);
+  color: rgba(245, 239, 228, 0.58);
+  text-align: center;
+  border-top: 1px solid rgba(245, 239, 228, 0.12);
+}
+
+@media (max-width: 950px) {
+  .site-header {
+    position: static;
+    transform: none;
+    width: calc(100% - 32px);
+    margin: 16px auto 0;
+  }
+
+  .hero {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    padding-top: 80px;
+  }
+
+  .hero-showcase {
+    min-height: 480px;
+  }
+
+  .showcase-card {
+    inset: 20px auto auto 0;
+  }
+
+  .project-card,
+  .project-card:nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card:nth-child(even) .project-visual {
+    order: 0;
+  }
+
+  .services-grid,
+  .process-panel {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .site-header {
+    border-radius: 24px;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .nav {
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero,
+  .section,
+  .contact-section {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  h1 {
+    font-size: 3.6rem;
+  }
+
+  h2 {
+    font-size: 2.8rem;
+  }
+
+  .hero-showcase {
+    min-height: 410px;
+  }
+
+  .showcase-card {
+    min-height: 360px;
+  }
+
+  .floating-card {
+    display: none;
+  }
+
+  .project-card,
+  .process-panel {
+    padding: 18px;
+    border-radius: 28px;
+  }
+
+  .project-visual {
+    min-height: 320px;
+  }
+
+  .mockup-screen {
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+  }
+}
