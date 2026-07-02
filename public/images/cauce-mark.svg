@@ -1,0 +1,18 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="markGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(282 154) rotate(90) scale(230)">
+      <stop stop-color="#9BC7FF" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#2F80FF" stop-opacity="0.12"/>
+    </radialGradient>
+    <filter id="softShadow" x="0" y="0" width="512" height="512" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="24" stdDeviation="36" flood-color="#2F80FF" flood-opacity="0.24"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="#020711"/>
+  <g filter="url(#softShadow)">
+    <circle cx="256" cy="256" r="168" fill="url(#markGlow)" stroke="#9BC7FF" stroke-opacity="0.42" stroke-width="5"/>
+    <path d="M170 330H270C322 330 364 288 364 236C364 184 322 142 270 142H170" stroke="#D8ECFF" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M170 330C170 246 238 178 322 178H364" stroke="#9BC7FF" stroke-width="16" stroke-linecap="round"/>
+    <circle cx="364" cy="178" r="16" fill="#D8ECFF"/>
+  </g>
+</svg>
