@@ -4,31 +4,58 @@ import "./style.css";
 const projects = [
   {
     title: "Benditos",
-    type: "Brand / Website / Food Concept",
+    category: "Brand / Website / Food Concept",
     description:
-      "A Latin street food, Mexican honey and pantry concept created for London, built around bold flavour, warm branding and a clean digital presence.",
-    tags: ["Branding", "Menu", "Website", "Launch Copy"],
+      "A Latin street food, Mexican honey and pantry concept shaped for London, combining brand direction, website structure, menu thinking and launch content.",
+    services: ["Brand direction", "Website", "Menu strategy", "Launch copy"],
     className: "benditos",
   },
   {
     title: "Crudelia",
-    type: "Restaurant Website",
+    category: "Restaurant Website",
     description:
-      "A bold, modern food website built around corn, salsa, slow braises, fresh toppings and proper cravings.",
-    tags: ["Restaurant", "Menu", "SEO", "Contact Form"],
+      "A bold restaurant website built around craving-led copy, strong food imagery, clear menu structure, contact flow, allergens and simple SEO.",
+    services: ["Restaurant site", "Menu page", "Contact form", "SEO"],
     className: "crudelia",
   },
   {
     title: "Entre Calles",
-    type: "Travel / Experience Website",
+    category: "Tourism / Experience Website",
     description:
-      "A clean Mexico City food tour concept built around local culture, strong imagery and easy bilingual navigation.",
-    tags: ["Tourism", "Bilingual", "Landing Page", "UX"],
+      "A Mexico City food tour concept built around local culture, visual storytelling, bilingual structure and experience-led navigation.",
+    services: ["Tourism", "Bilingual UX", "Landing page", "Storytelling"],
     className: "entrecalles",
   },
 ];
 
-function ProjectMockup({ project }) {
+const services = [
+  {
+    number: "01",
+    title: "Launch websites",
+    text: "Focused websites for new brands, pop-ups, founders and small businesses who need to look established quickly.",
+  },
+  {
+    number: "02",
+    title: "Restaurant & hospitality sites",
+    text: "Clean digital homes for menus, locations, opening hours, galleries, bookings, contact forms and social links.",
+  },
+  {
+    number: "03",
+    title: "Digital refreshes",
+    text: "Refined updates for businesses with existing websites that feel outdated, messy or no longer match the brand.",
+  },
+];
+
+const included = [
+  "Responsive design",
+  "Copy structure",
+  "Contact setup",
+  "SEO basics",
+  "Domain support",
+  "Launch support",
+];
+
+function ProjectCard({ project }) {
   return (
     <article className={`project-card ${project.className}`}>
       <div className="project-visual">
@@ -38,25 +65,31 @@ function ProjectMockup({ project }) {
           <span></span>
         </div>
 
-        <div className="mockup-screen">
-          <div className="mockup-nav"></div>
+        <div className="mockup-window">
+          <div className="mockup-label">{project.category}</div>
           <div className="mockup-title">{project.title}</div>
-          <div className="mockup-line wide"></div>
-          <div className="mockup-line"></div>
-          <div className="mockup-button"></div>
+          <div className="mockup-lines">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </div>
 
       <div className="project-content">
-        <p className="project-type">{project.type}</p>
+        <p className="eyebrow small">{project.category}</p>
         <h3>{project.title}</h3>
         <p>{project.description}</p>
 
         <div className="tag-list">
-          {project.tags.map((tag) => (
-            <span key={tag}>{tag}</span>
+          {project.services.map((service) => (
+            <span key={service}>{service}</span>
           ))}
         </div>
+
+        <a href="#contact" className="text-link">
+          Discuss a similar project
+        </a>
       </div>
     </article>
   );
@@ -65,15 +98,13 @@ function ProjectMockup({ project }) {
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const closeMenu = () => {
-    setMenuOpen(false);
-  };
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <>
       <header className="site-header">
         <a href="#top" className="logo" onClick={closeMenu}>
-          Built by Stu
+          Built by Stu Studio
         </a>
 
         <button
@@ -89,16 +120,19 @@ function App() {
 
         <nav className={`nav-dropdown ${menuOpen ? "open" : ""}`}>
           <a href="#work" onClick={closeMenu}>
-            Work
+            Selected work
           </a>
           <a href="#services" onClick={closeMenu}>
             Services
+          </a>
+          <a href="#included" onClick={closeMenu}>
+            What’s included
           </a>
           <a href="#process" onClick={closeMenu}>
             Process
           </a>
           <a href="#contact" onClick={closeMenu}>
-            Contact
+            Start a project
           </a>
         </nav>
       </header>
@@ -106,100 +140,101 @@ function App() {
       <main id="top">
         <section className="hero">
           <div className="hero-copy">
-            <p className="eyebrow">Web design for small businesses</p>
+            <p className="eyebrow">Digital design for independent brands</p>
 
-            <h1>Websites that look sharp, feel simple and actually work.</h1>
+            <h1>
+              Sharp websites for brands that need to look established from day
+              one.
+            </h1>
 
             <p>
-              Clean, modern websites for restaurants, cafés, food brands,
-              creatives and independent businesses who need to look professional
-              online without making things complicated.
+              Built by Stu Studio creates clean, considered websites for food
+              brands, restaurants, creatives and independent businesses.
             </p>
 
-            <div className="hero-buttons">
-              <a href="#contact" className="button dark">
+            <div className="hero-actions">
+              <a href="#contact" className="button primary">
                 Start a project
               </a>
-              <a href="#work" className="button light">
-                See the work
+              <a href="#work" className="button secondary">
+                View selected work
               </a>
             </div>
           </div>
 
-          <div className="hero-showcase">
-            <div className="showcase-card main-card">
-              <div className="mini-browser">
-                <div></div>
-                <div></div>
-                <div></div>
+          <div className="hero-panel">
+            <div className="studio-card">
+              <div className="studio-card-top">
+                <span></span>
+                <span></span>
+                <span></span>
               </div>
 
-              <div className="showcase-inner">
-                <p>Featured project</p>
+              <div className="studio-card-content">
+                <p>Featured direction</p>
                 <h2>Benditos</h2>
-                <span>Brand · Website · Food Concept</span>
+                <span>Brand · Website · Launch</span>
               </div>
             </div>
 
-            <div className="floating-card card-one">Restaurant sites</div>
-
-            <div className="floating-card card-two">Brand launches</div>
+            <div className="floating-note note-one">Strategy</div>
+            <div className="floating-note note-two">Copy</div>
+            <div className="floating-note note-three">Design</div>
           </div>
         </section>
 
-        <section className="intro-strip">
-          <span>One-page sites</span>
-          <span>Restaurant websites</span>
-          <span>Website refreshes</span>
-          <span>Launch pages</span>
+        <section className="statement-section">
+          <p>
+            Strategy. Copy. Design. Build. Launch.
+          </p>
+          <span>
+            A lean studio approach for brands that need a polished digital
+            presence without agency noise.
+          </span>
         </section>
 
         <section id="work" className="section work-section">
           <div className="section-heading">
-            <p className="eyebrow">Recent work</p>
-            <h2>Visual sites with flavour, story and purpose.</h2>
+            <p className="eyebrow">Selected work</p>
+            <h2>Built for brands with taste, story and ambition.</h2>
           </div>
 
           <div className="project-grid">
             {projects.map((project) => (
-              <ProjectMockup key={project.title} project={project} />
+              <ProjectCard key={project.title} project={project} />
             ))}
           </div>
         </section>
 
         <section id="services" className="section services-section">
           <div className="section-heading">
-            <p className="eyebrow">What I do</p>
-            <h2>Simple sites for real businesses.</h2>
+            <p className="eyebrow">Services</p>
+            <h2>Digital presence, shaped properly.</h2>
           </div>
 
           <div className="services-grid">
-            <article>
-              <span>01</span>
-              <h3>One-page websites</h3>
-              <p>
-                A clean online presence for small businesses, pop-ups,
-                freelancers and new ideas.
-              </p>
-            </article>
+            {services.map((service) => (
+              <article key={service.title}>
+                <span>{service.number}</span>
+                <h3>{service.title}</h3>
+                <p>{service.text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
 
-            <article>
-              <span>02</span>
-              <h3>Restaurant websites</h3>
-              <p>
-                Menus, opening hours, location, gallery, contact forms and
-                social links.
-              </p>
-            </article>
+        <section id="included" className="section included-section">
+          <div className="included-panel">
+            <div>
+              <p className="eyebrow">What’s included</p>
+              <h2>Everything needed to launch cleanly.</h2>
+            </div>
 
-            <article>
-              <span>03</span>
-              <h3>Website refreshes</h3>
-              <p>
-                Tidy up an outdated or messy website and make it feel polished
-                again.
-              </p>
-            </article>
+            <div className="included-list">
+              {included.map((item) => (
+                <div key={item}>{item}</div>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -207,28 +242,28 @@ function App() {
           <div className="process-panel">
             <div>
               <p className="eyebrow">Process</p>
-              <h2>Clear, quick and straightforward.</h2>
+              <h2>Clear, calm and built around launch.</h2>
             </div>
 
             <div className="process-steps">
               <div>
                 <span>01</span>
-                <p>We talk about what you need.</p>
+                <p>We define the business, audience, style and purpose.</p>
               </div>
 
               <div>
                 <span>02</span>
-                <p>I design the structure, style and copy.</p>
+                <p>I shape the structure, visual direction and site copy.</p>
               </div>
 
               <div>
                 <span>03</span>
-                <p>I build the website and polish the details.</p>
+                <p>The website is built, refined and tested across screens.</p>
               </div>
 
               <div>
                 <span>04</span>
-                <p>You launch with a clean site ready to share.</p>
+                <p>You launch with a polished site ready to send people to.</p>
               </div>
             </div>
           </div>
@@ -237,28 +272,36 @@ function App() {
         <section id="contact" className="contact-section">
           <div>
             <p className="eyebrow">Start a project</p>
-
-            <h2>Need a simple website that looks proper?</h2>
-
+            <h2>Ready to give your business a sharper online presence?</h2>
             <p>
-              Send me a message with what you’re building and what kind of site
-              you need.
+              Send me a message with what you’re building, where you are now and
+              what you need the website to do.
             </p>
 
-            <a
-              href="https://wa.me/447723187596"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="button cream"
-            >
-              Message me on WhatsApp
-            </a>
+            <div className="contact-actions">
+              <a
+                href="https://wa.me/44YOURNUMBER"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="button primary"
+              >
+                Message on WhatsApp
+              </a>
+
+              <a href="mailto:hello@example.com" className="button secondary">
+                Email Stu
+              </a>
+            </div>
+
+            <p className="contact-note">
+              Replace the WhatsApp number and email with your real details.
+            </p>
           </div>
         </section>
       </main>
 
       <footer className="footer">
-        <p>Built by Stu — Simple websites for small businesses.</p>
+        <p>Built by Stu Studio — Digital design for independent brands.</p>
       </footer>
     </>
   );
