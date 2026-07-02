@@ -94,7 +94,7 @@ a {
   pointer-events: auto;
   display: inline-flex;
   align-items: center;
-  gap: 13px;
+  gap: 11px;
   padding: 12px 22px 12px 12px;
   border-radius: 999px;
   color: var(--text);
@@ -147,9 +147,11 @@ a {
 }
 
 .logo-text {
-  font-size: 1.08rem;
-  font-weight: 900;
-  letter-spacing: -0.055em;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: -0.06em;
+  transform: translateY(-1px);
 }
 
 /* Menu */
@@ -1076,7 +1078,7 @@ main {
   }
 
   .logo-text {
-    font-size: 0.98rem;
+    font-size: 1.08rem;
   }
 
   .menu-toggle {
