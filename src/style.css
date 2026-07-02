@@ -88,22 +88,71 @@ a {
   pointer-events: none;
 }
 
+/* Cauce logo */
+
 .logo {
   pointer-events: auto;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  padding: 9px 16px;
+  gap: 9px;
+  padding: 8px 14px 8px 9px;
   border-radius: 999px;
-  font-size: 0.88rem;
-  font-weight: 800;
-  letter-spacing: -0.04em;
   color: var(--text);
   background: rgba(5, 11, 20, 0.72);
   border: 1px solid rgba(237, 244, 255, 0.14);
   backdrop-filter: blur(18px);
   box-shadow: 0 18px 60px rgba(0, 0, 0, 0.28);
 }
+
+.logo-mark {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 70% 28%, rgba(155, 199, 255, 0.42), transparent 34%),
+    rgba(47, 128, 255, 0.18);
+  border: 1px solid rgba(155, 199, 255, 0.35);
+  box-shadow: 0 0 26px rgba(47, 128, 255, 0.26);
+}
+
+.logo-mark::before {
+  content: "";
+  width: 14px;
+  height: 8px;
+  border: 1.8px solid var(--blue-soft);
+  border-left: 0;
+  border-bottom: 0;
+  border-radius: 0 999px 0 0;
+  transform: translateX(-1px);
+}
+
+.logo-mark::after {
+  content: "";
+  position: absolute;
+  width: 4.5px;
+  height: 4.5px;
+  right: 7px;
+  top: 7px;
+  border-radius: 999px;
+  background: var(--sky);
+  box-shadow: 0 0 14px rgba(216, 236, 255, 0.85);
+}
+
+.logo-mark span {
+  display: none;
+}
+
+.logo-text {
+  font-size: 0.9rem;
+  font-weight: 850;
+  letter-spacing: -0.045em;
+}
+
+/* Menu */
 
 .menu-toggle {
   width: 40px;
@@ -1004,8 +1053,17 @@ main {
   }
 
   .logo {
-    padding: 8px 14px;
-    font-size: 0.84rem;
+    padding: 7px 13px 7px 8px;
+    gap: 8px;
+  }
+
+  .logo-mark {
+    width: 26px;
+    height: 26px;
+  }
+
+  .logo-text {
+    font-size: 0.86rem;
   }
 
   .menu-toggle {
