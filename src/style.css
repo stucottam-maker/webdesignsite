@@ -1,14 +1,21 @@
 :root {
   --bg: #050b14;
   --bg-soft: #07111f;
+  --bg-mid: #0b1628;
+  --bg-light: #10233e;
+  --bg-lighter: #14345c;
+
   --navy: #0b1628;
   --navy-light: #10233e;
   --card: rgba(15, 29, 51, 0.78);
+
   --text: #edf4ff;
   --muted: #8fa4bf;
   --muted-strong: #c8d8ee;
+
   --blue: #2f80ff;
   --blue-soft: #7ab3ff;
+
   --line: rgba(237, 244, 255, 0.12);
   --line-strong: rgba(237, 244, 255, 0.22);
   --glow: rgba(47, 128, 255, 0.32);
@@ -247,7 +254,7 @@ h3 {
   background:
     radial-gradient(circle at 85% 18%, rgba(47, 128, 255, 0.34), transparent 34%),
     radial-gradient(circle at 18% 82%, rgba(122, 179, 255, 0.12), transparent 28%),
-    linear-gradient(135deg, #050b14 0%, #07111f 45%, #102744 100%);
+    linear-gradient(135deg, #030812 0%, #050b14 45%, #07111f 100%);
   overflow: hidden;
 }
 
@@ -364,7 +371,7 @@ h3 {
   justify-content: center;
   gap: 12px;
   flex-wrap: wrap;
-  background: #030812;
+  background: #07111f;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
@@ -384,7 +391,7 @@ h3 {
   padding: 52px 6vw;
   background:
     radial-gradient(circle at 50% 0%, rgba(47, 128, 255, 0.16), transparent 32%),
-    var(--bg);
+    linear-gradient(180deg, #07111f 0%, #0b1628 100%);
   border-bottom: 1px solid var(--line);
 }
 
@@ -415,7 +422,7 @@ h3 {
 .work-section {
   background:
     radial-gradient(circle at 10% 0%, rgba(47, 128, 255, 0.14), transparent 28%),
-    var(--bg);
+    linear-gradient(180deg, #0b1628 0%, #0f1d33 100%);
 }
 
 .project-grid {
@@ -595,8 +602,8 @@ h3 {
 
 .services-section {
   background:
-    radial-gradient(circle at 80% 10%, rgba(47, 128, 255, 0.13), transparent 30%),
-    #030812;
+    radial-gradient(circle at 80% 10%, rgba(47, 128, 255, 0.15), transparent 30%),
+    linear-gradient(180deg, #0f1d33 0%, #10233e 100%);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
@@ -634,7 +641,9 @@ h3 {
 /* Process */
 
 .process-section {
-  background: var(--bg);
+  background:
+    radial-gradient(circle at 15% 10%, rgba(122, 179, 255, 0.12), transparent 30%),
+    linear-gradient(180deg, #10233e 0%, #123054 100%);
 }
 
 .process-grid {
@@ -652,7 +661,7 @@ h3 {
 .included-section {
   background:
     radial-gradient(circle at 20% 10%, rgba(47, 128, 255, 0.14), transparent 30%),
-    #030812;
+    linear-gradient(180deg, #123054 0%, #14345c 100%);
   border-top: 1px solid var(--line);
 }
 
@@ -691,8 +700,8 @@ h3 {
   padding: 96px 6vw;
   text-align: center;
   background:
-    radial-gradient(circle at 50% 0%, rgba(47, 128, 255, 0.3), transparent 35%),
-    linear-gradient(135deg, #050b14, #0b1628);
+    radial-gradient(circle at 50% 0%, rgba(47, 128, 255, 0.32), transparent 35%),
+    linear-gradient(135deg, #14345c 0%, #10233e 55%, #0b1628 100%);
   border-top: 1px solid var(--line);
 }
 
@@ -722,7 +731,7 @@ h3 {
 
 .footer {
   padding: 26px 6vw;
-  background: #030812;
+  background: #07111f;
   color: rgba(237, 244, 255, 0.5);
   text-align: center;
   border-top: 1px solid var(--line);
