@@ -347,27 +347,116 @@ function App() {
         </section>
 
         <section id="contact" className="contact-section">
-          <div>
-            <p className="eyebrow">Start a Project</p>
-            <h2>Ready to give your business a clearer path online?</h2>
-            <p>
-              Send me a message with what you’re building, where you are now and
-              what you need the website to do.
-            </p>
+          <div className="contact-inner">
+            <div className="contact-copy">
+              <p className="eyebrow">Start a Project</p>
+              <h2>Ready to give your business a clearer path online?</h2>
+              <p>
+                Send a few details about what you’re building, where you are now
+                and what you need the website to do.
+              </p>
 
-            <div className="contact-actions">
-              <a
-                href="https://wa.me/447723187596"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="button primary"
-              >
-                Message on WhatsApp
-              </a>
-              <a href="mailto:stucottam@gmail.com" className="button secondary">
-                Email me
-              </a>
+              <div className="contact-details">
+                <a
+                  href="https://wa.me/447723187596"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  WhatsApp
+                </a>
+                <a href="mailto:stucottam@gmail.com">stucottam@gmail.com</a>
+              </div>
             </div>
+
+            <form
+              className="contact-form"
+              action="https://formspree.io/f/mvzjwqeg"
+              method="POST"
+            >
+              <div className="form-row">
+                <label>
+                  Name
+                  <input type="text" name="name" placeholder="Your name" required />
+                </label>
+
+                <label>
+                  Business name
+                  <input
+                    type="text"
+                    name="business"
+                    placeholder="Business / brand name"
+                  />
+                </label>
+              </div>
+
+              <label>
+                Email
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="you@email.com"
+                  required
+                />
+              </label>
+
+              <label>
+                What do you need?
+                <select name="project_type" required defaultValue="">
+                  <option value="" disabled>
+                    Choose one
+                  </option>
+                  <option value="Launch Site">Launch Site</option>
+                  <option value="Restaurant Site">Restaurant Site</option>
+                  <option value="Website Refresh">Website Refresh</option>
+                  <option value="Not sure yet">Not sure yet</option>
+                </select>
+              </label>
+
+              <div className="form-row">
+                <label>
+                  Budget range
+                  <select name="budget" defaultValue="">
+                    <option value="" disabled>
+                      Choose one
+                    </option>
+                    <option value="£350–£500">£350–£500</option>
+                    <option value="£500–£750">£500–£750</option>
+                    <option value="£750–£1,200">£750–£1,200</option>
+                    <option value="£1,200+">£1,200+</option>
+                    <option value="Not sure yet">Not sure yet</option>
+                  </select>
+                </label>
+
+                <label>
+                  Timeline
+                  <select name="timeline" defaultValue="">
+                    <option value="" disabled>
+                      Choose one
+                    </option>
+                    <option value="ASAP">ASAP</option>
+                    <option value="1–2 weeks">1–2 weeks</option>
+                    <option value="2–4 weeks">2–4 weeks</option>
+                    <option value="Flexible">Flexible</option>
+                  </select>
+                </label>
+              </div>
+
+              <label>
+                Project details
+                <textarea
+                  name="message"
+                  rows="5"
+                  placeholder="Tell me a little about the business, the website you need and any links or references."
+                  required
+                ></textarea>
+              </label>
+
+              <input type="hidden" name="_subject" value="New Cauce project enquiry" />
+
+              <button type="submit" className="button primary">
+                Send project enquiry
+              </button>
+            </form>
           </div>
         </section>
 
